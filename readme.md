@@ -112,9 +112,124 @@ chmod +x setup-mc-server.sh
 
 ---
 
-### 著作権等
+素晴らしい着眼点です。
+**README に主要プラグインの役割・配布元などの解説セクションを追記**しましょう。
+初心者が見ても「何のためのプラグインか」「どこで詳細を見るか」分かるようにまとめます。
 
-* 各プラグイン・サーバー本体のライセンスは配布元に準じます。
+---
+
+## 📦 導入プラグイン一覧・解説
+
+### BlueMap
+
+* **概要**: MinecraftワールドをWebブラウザで3Dマップとして閲覧できるダイナミックマッププラグイン。地図は自動生成・更新され、URLを知っていれば誰でもアクセス可能。
+* **公式**: [https://bluemap.bluecolored.de/](https://bluemap.bluecolored.de/)
+* **配布元**: [Modrinth BlueMap](https://modrinth.com/plugin/bluemap)
+
+---
+
+### Chunky
+
+* **概要**: ワールド全域や一部を「事前レンダリング」しておくことで、後からプレイする人のチャンク生成ラグを抑えるツール。BlueMapやDynmap導入時の負荷軽減にも有効。
+* **公式**: [https://github.com/pop4959/Chunky](https://github.com/pop4959/Chunky)
+* **配布元**: [Modrinth Chunky](https://modrinth.com/plugin/chunky)
+
+---
+
+### Floodgate / Geyser
+
+* **概要**:
+
+  * **Geyser**: Java版サーバーにBedrock Edition（Switch/スマホ等）のクライアントがログインできるようにするプロキシサーバー。
+  * **Floodgate**: Bedrockユーザーがマイクラ公式アカウント不要で参加できるようにする認証統合プラグイン（Geyserと併用）。
+* **公式**: [https://geysermc.org/](https://geysermc.org/)
+* **配布元**: [Geyser Releases](https://download.geysermc.org/), [Floodgate Releases](https://download.geysermc.org/)
+
+---
+
+### LuckPerms
+
+* **概要**: サーバー内の権限・グループ管理の定番。GUIツールやコマンドでも設定可能。大規模サーバーでも安心の高性能パーミッションプラグイン。
+* **公式**: [https://luckperms.net/](https://luckperms.net/)
+* **配布元**: [LuckPerms Releases](https://luckperms.net/download)
+
+---
+
+### LunaChat
+
+* **概要**: 日本語チャット/ローマ字変換や、チャンネル管理ができる国産チャット強化プラグイン。
+* **公式**: [https://www.spigotmc.org/resources/lunachat.1615/](https://www.spigotmc.org/resources/lunachat.1615/)
+* **導入方法**: 手動ダウンロード推奨（URL構造が変動するため）
+
+---
+
+### Multiverse ファミリー（Core / Inventories / NetherPortals / Portals / SignPortals）
+
+* **概要**: 複数ワールド管理、ワールドごとのインベントリ分離、ネザーポータル同期、ワールド間ゲート、看板ゲート機能などを提供する定番マルチワールドプラグイン群。
+* **配布元**: [Multiverse Core (Bukkit)](https://dev.bukkit.org/projects/multiverse-core) 他
+
+---
+
+### spark
+
+* **概要**: サーバーのパフォーマンス計測・プロファイリング・タイミング解析のためのツール。
+* **公式**: [https://spark.lucko.me/](https://spark.lucko.me/)
+* **配布元**: [spark Releases](https://spark.lucko.me/download)
+
+---
+
+### TerraformGenerator
+
+* **概要**: 超高品質な地形生成を行うワールドジェネレータ。独自のバイオームや地形が出現する「高難度サバイバル」にもおすすめ。
+* **公式**: [https://github.com/Hex27/TerraformGenerator](https://github.com/Hex27/TerraformGenerator)
+* **配布元**: [Modrinth TerraformGenerator](https://modrinth.com/plugin/terraformgenerator)
+
+---
+
+### ViaVersion / ViaBackwards
+
+* **概要**: クライアント側のバージョン違い（下位/上位）でもサーバーに接続できるようにする互換系プラグイン。バージョンアップ時の「新旧混在」プレイにも必須。
+* **公式**: [https://viaversion.com/](https://viaversion.com/)
+* **配布元**: [ViaVersion Downloads](https://ci.viaversion.com/)
+
+---
+
+### Simple Voice Chat
+
+* **概要**: サーバー内で「ボイスチャット」ができる人気プラグイン。
+* **公式**: [https://modrepo.de/minecraft/voicechat](https://modrepo.de/minecraft/voicechat)
+* **配布元**: [Modrinth Simple Voice Chat](https://modrinth.com/plugin/simple-voice-chat)
+
+---
+
+### WorldEdit
+
+* **概要**: ワールド編集の超定番。大規模なブロック操作や範囲選択/複製/貼り付けなどを高速に実現。
+* **公式**: [https://enginehub.org/worldedit/](https://enginehub.org/worldedit/)
+* **配布元**: [WorldEdit (Bukkit)](https://dev.bukkit.org/projects/worldedit)
+
+---
+
+### その他
+
+* 必要に応じて「plugins/」に独自jar追加、または古いサーバーから設定・データをコピーできます。
+
+---
+
+## 📝 プラグインの更新・追加について
+
+* 配布元のURLやバージョンは時々変わるため、**公式やModrinth等で最新版を確認し、スクリプトを更新してください。**
+* 「運用中に追加したい」場合は plugins ディレクトリに jar を手動で配置すればOKです。
+
+---
+
+> これらのプラグインの詳細や運用ノウハウ、設定例も必要なら別途READMEに追記できます。
+> 「プラグインごとに設定例やTipsも載せたい」など、もっと細かい要望があれば追加も可能です！
+
+---
+
+ご要望に応じてREADME全体の整形もサポートします！
+
 
 ---
 
