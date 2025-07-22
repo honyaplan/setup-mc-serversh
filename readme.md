@@ -113,7 +113,6 @@ chmod +x setup-mc-server.sh
 ---
 
 
-
 ## 📦 導入プラグイン一覧・解説
 
 ### BlueMap
