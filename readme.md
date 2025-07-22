@@ -126,7 +126,7 @@ chmod +x setup-mc-server.sh
 - ポート番号は `bluemap/webserver.conf` で変更できます
 - ファイアウォールやルーターのポート開放設定も必要な場合があります
 - 詳細・設定: https://bluemap.bluecolored.de/
-- 
+
 ---
 
 ### Chunky
