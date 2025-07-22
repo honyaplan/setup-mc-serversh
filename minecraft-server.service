@@ -1,0 +1,20 @@
+[Unit]
+Description=Minecraft PaperMC Server
+After=network.target
+
+[Service]
+# ユーザー名を正しく設定
+User=honya
+WorkingDirectory=/home/honya/minecraft
+# -Xmxは環境に合わせて調整
+ExecStart=/usr/bin/java -Xmx4G -jar paper.jar nogui
+Restart=on-failure
+RestartSec=10
+# メモリ不足などのOOMでkillされた場合も自動再起動
+SuccessExitStatus=0 143
+# サーバ落ちた時ログ残す
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
