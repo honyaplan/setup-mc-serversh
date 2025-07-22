@@ -121,6 +121,11 @@ chmod +x setup-mc-server.sh
 * **公式**: [https://bluemap.bluecolored.de/](https://bluemap.bluecolored.de/)
 * **配布元**: [Modrinth BlueMap](https://modrinth.com/plugin/bluemap)
 
+- サーバー起動後、以下のURLでワールドを3Dマップとして閲覧できます：
+    - `http://<サーバーIP>:8100/`
+- ポート番号は `bluemap/webserver.conf` で変更できます
+- ファイアウォールやルーターのポート開放設定も必要な場合があります
+- 詳細・設定: https://bluemap.bluecolored.de/
 ---
 
 ### Chunky
